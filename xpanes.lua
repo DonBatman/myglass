@@ -10,8 +10,7 @@ xpanes.register_pane("myglass:glass_pane_black", {
 		{"default:glass", "dye:black", "default:glass"},
 		{"", "default:glass", ""},
 		{"","",""}
-	}
-
+	},
 })
 
 --xpane White
@@ -27,7 +26,6 @@ xpanes.register_pane("myglass:glass_pane_white", {
 		{"", "default:glass", ""},
 		{"","",""}
 	}
-
 })
 
 --xpane Yellow
@@ -43,7 +41,6 @@ xpanes.register_pane("myglass:glass_pane_yellow", {
 		{"", "default:glass", ""},
 		{"","",""}
 	}
-
 })
 
 --xpane Blue
@@ -59,7 +56,6 @@ xpanes.register_pane("myglass:glass_pane_blue", {
 		{"", "default:glass", ""},
 		{"","",""}
 	}
-
 })
 
 --xpane Red
@@ -75,7 +71,6 @@ xpanes.register_pane("myglass:glass_pane_red", {
 		{"", "default:glass", ""},
 		{"","",""}
 	}
-
 })
 
 --xpane Lime
@@ -91,5 +86,4 @@ xpanes.register_pane("myglass:glass_pane_lime", {
 		{"", "default:glass", ""},
 		{"","",""}
 	}
-
 })
