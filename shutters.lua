@@ -50,3 +50,23 @@ minetest.register_node("myglass:window_shutter2", {
 	},
 	on_place = minetest.rotate_node,
 })
+
+--Crafts
+
+minetest.register_craft({
+	output = "myglass:window_shutter 1",
+	recipe = {
+		{"default:wood", "",""},
+		{"default:pine_wood", "",""},
+		{"default:wood", "",""},
+	}
+})
+
+minetest.register_craft({
+	output = "myglass:window_shutter2 1",
+	recipe = {
+		{"default:wood", "default:wood",""},
+		{"default:pine_wood", "default:pine_wood",""},
+		{"default:wood", "default:wood",""},
+	}
+})
