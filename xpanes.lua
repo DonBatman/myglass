@@ -3,7 +3,7 @@ xpanes.register_pane("myglass:glass_pane_black", {
 	description = ("Black Glass Pane"),
 	textures = {"myglass_black_framed.png", "", "myglass_black.png"},
 	inventory_image = "myglass_black_framed.png",
-	wield_image = "glass_black_framed.png",
+	wield_image = "myglass_black_framed.png",
 	sounds = default.node_sound_glass_defaults(),
 	groups = {snappy=2, cracky=3},
 	recipe = {
@@ -18,7 +18,7 @@ xpanes.register_pane("myglass:glass_pane_white", {
 	description = ("White Glass Pane"),
 	textures = {"myglass_white_framed.png", "", "myglass_white.png"},
 	inventory_image = "myglass_white_framed.png",
-	wield_image = "glass_white_framed.png",
+	wield_image = "myglass_white_framed.png",
 	sounds = default.node_sound_glass_defaults(),
 	groups = {snappy=2, cracky=3},
 	recipe = {
