@@ -2,11 +2,12 @@
 minetest.register_node("myglass:window_frame", {
 	description = "Wood Window Frame",
 	tiles = {"default_pine_wood.png"},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window2.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
@@ -22,11 +23,12 @@ minetest.register_node("myglass:window_frame", {
 minetest.register_node("myglass:window_horizontal", {
 	description = "Wood Window Horizontal",
 	tiles = {"default_pine_wood.png"},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window3.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
@@ -43,11 +45,12 @@ minetest.register_node("myglass:window_horizontal", {
 minetest.register_node("myglass:window_vertical", {
 	description = "Wood Window Vertical",
 	tiles = {"default_pine_wood.png"},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window5.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
@@ -64,11 +67,12 @@ minetest.register_node("myglass:window_vertical", {
 minetest.register_node("myglass:window_plus", {
 	description = "Wood Window Plus",
 	tiles = {"default_pine_wood.png"},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window4.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
@@ -86,11 +90,12 @@ minetest.register_node("myglass:window_plus", {
 minetest.register_node("myglass:window_frame_white", {
 	description = "Window Frame White",
 	tiles = {"myglass_white.png"},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window2.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
@@ -106,11 +111,12 @@ minetest.register_node("myglass:window_frame_white", {
 minetest.register_node("myglass:window_horizontal_white", {
 	description = "Window Horizontal White",
 	tiles = {"myglass_white.png"},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window3.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
@@ -127,11 +133,12 @@ minetest.register_node("myglass:window_horizontal_white", {
 minetest.register_node("myglass:window_vertical_white", {
 	description = "Window Vertical White",
 	tiles = {"myglass_white.png"},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window5.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},
@@ -148,11 +155,12 @@ minetest.register_node("myglass:window_vertical_white", {
 minetest.register_node("myglass:window_plus_white", {
 	description = "Window Plus White",
 	tiles = {"myglass_white.png"},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window4.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, 0.375, -0.0625, 0.5, 0.5, 0.0625},

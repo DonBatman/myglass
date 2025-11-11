@@ -1,18 +1,24 @@
 minetest.register_node("myglass:window_shutter", {
 	description = "Window Shutter",
 	tiles = {
-		"myglass_window_shutter.png",
-		"myglass_window_shutter.png",
-		"myglass_window_shutter.png",
-		"myglass_window_shutter.png",
-		"myglass_window_shutter.png",
-		"myglass_window_shutter_front.png"
+		"myglass_window_shutter.png"
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window_shutter_sm.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0, 0.5, -0.4375, 0.5},
+			{0.375, -0.5, 0, 0.5, -0.375, 0.5},
+			{-0.5, -0.5, 0, -0.375, -0.375, 0.5},
+			{-0.5, -0.5, 0, 0.5, -0.375, 0.125},
+			{-0.5, -0.5, 0.375, 0.5, -0.375, 0.5},
+		}
+	},
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, 0, 0.5, -0.4375, 0.5},
@@ -27,18 +33,24 @@ minetest.register_node("myglass:window_shutter", {
 minetest.register_node("myglass:window_shutter2", {
 	description = "Window Shutter 2",
 	tiles = {
-		"myglass_window_shutter_front.png",
-		"myglass_window_shutter.png",
-		"myglass_window_shutter.png",
-		"myglass_window_shutter.png",
-		"myglass_window_shutter.png",
-		"myglass_window_shutter.png"
+		"myglass_window_shutter_front.png"
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "myglass_window_shutter.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2, oddly_breakable_by_hand = 2},
-	node_box = {
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.4375, 0.5, -0.4375, 0.5},
+			{0.375, -0.5, -0.5, 0.5, -0.375, 0.5},
+			{-0.5, -0.5, -0.5, -0.375, -0.375, 0.5},
+			{-0.5, -0.5, -0.5, 0.5, -0.375, -0.375},
+			{-0.5, -0.5, 0.375, 0.5, -0.375, 0.5},
+		}
+	},
+	collision_box = {
 		type = "fixed",
 		fixed = {
 			{-0.5, -0.5, -0.4375, 0.5, -0.4375, 0.5},
