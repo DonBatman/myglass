@@ -173,6 +173,25 @@ minetest.register_node("myglass:window_plus_white", {
 		},
 	on_place = minetest.rotate_node
 })
+local colors = {"red", "cyan", "green", "purple", "white"}
+for _,col in pairs(colors) do
+--Blinds
+minetest.register_node("myglass:blinds_"..col, {
+	description = "Blinds - "..col,
+	tiles = {"myglass_blinds_"..col..".png"},
+	drawtype = "mesh",
+	mesh = "myglass_blinds.obj",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.5, 0.5, 0.5, 0.45},
+			}
+		},
+})
+end
 
 --Crafts
 --------------------------------------------------------------------
