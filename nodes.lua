@@ -190,6 +190,39 @@ minetest.register_node("myglass:blinds_"..col, {
 			{-0.5, -0.5, 0.5, 0.5, 0.5, 0.45},
 			}
 		},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.5, 0.5, 0.5, 0.45},
+			}
+		},
+	on_punch = function(pos, node, puncher, pointed_thing)
+		core.set_node(pos, {name = "myglass:blinds_up_"..col, param2 = node.param2})
+	end
+})
+minetest.register_node("myglass:blinds_up_"..col, {
+	description = "Blinds Up - "..col,
+	tiles = {"myglass_blinds_"..col..".png"},
+	drawtype = "mesh",
+	mesh = "myglass_blinds_up.obj",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+	selection_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.5, 0.5, 0.5, 0.45},
+			}
+		},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, 0.5, 0.5, 0.5, 0.45},
+			}
+		},
+	on_punch = function(pos, node, puncher, pointed_thing)
+		core.set_node(pos, {name = "myglass:blinds_"..col, param2 = node.param2})
+	end
 })
 end
 
