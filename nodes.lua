@@ -1,5 +1,5 @@
 --Window Frame
-minetest.register_node("myglass:window_frame", {
+core.register_node("myglass:window_frame", {
 	description = "Wood Window Frame",
 	tiles = {"default_pine_wood.png"},
 	drawtype = "mesh",
@@ -16,11 +16,11 @@ minetest.register_node("myglass:window_frame", {
 			{0.375, -0.5, -0.0625, 0.5, 0.5, 0.0625},
 			}
 		},
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 
 --Window Horizontal
-minetest.register_node("myglass:window_horizontal", {
+core.register_node("myglass:window_horizontal", {
 	description = "Wood Window Horizontal",
 	tiles = {"default_pine_wood.png"},
 	drawtype = "mesh",
@@ -38,11 +38,11 @@ minetest.register_node("myglass:window_horizontal", {
 			{-0.5, -0.0625, -0.0625, 0.5, 0.0625, 0.0625},
 			}
 		},
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 
 --Window Vertical
-minetest.register_node("myglass:window_vertical", {
+core.register_node("myglass:window_vertical", {
 	description = "Wood Window Vertical",
 	tiles = {"default_pine_wood.png"},
 	drawtype = "mesh",
@@ -60,11 +60,11 @@ minetest.register_node("myglass:window_vertical", {
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 			}
 		},
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 
 --Window Plus
-minetest.register_node("myglass:window_plus", {
+core.register_node("myglass:window_plus", {
 	description = "Wood Window Plus",
 	tiles = {"default_pine_wood.png"},
 	drawtype = "mesh",
@@ -83,11 +83,11 @@ minetest.register_node("myglass:window_plus", {
 			{-0.5, -0.0625, -0.0625, 0.5, 0.0625, 0.0625},
 			}
 		},
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 
 --Window Frame White
-minetest.register_node("myglass:window_frame_white", {
+core.register_node("myglass:window_frame_white", {
 	description = "Window Frame White",
 	tiles = {"myglass_white.png"},
 	drawtype = "mesh",
@@ -104,11 +104,11 @@ minetest.register_node("myglass:window_frame_white", {
 			{0.375, -0.5, -0.0625, 0.5, 0.5, 0.0625},
 			}
 		},
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 
 --Window Horizontal White
-minetest.register_node("myglass:window_horizontal_white", {
+core.register_node("myglass:window_horizontal_white", {
 	description = "Window Horizontal White",
 	tiles = {"myglass_white.png"},
 	drawtype = "mesh",
@@ -126,11 +126,11 @@ minetest.register_node("myglass:window_horizontal_white", {
 			{-0.5, -0.0625, -0.0625, 0.5, 0.0625, 0.0625},
 			}
 		},
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 
 --Window Vertical White
-minetest.register_node("myglass:window_vertical_white", {
+core.register_node("myglass:window_vertical_white", {
 	description = "Window Vertical White",
 	tiles = {"myglass_white.png"},
 	drawtype = "mesh",
@@ -148,11 +148,11 @@ minetest.register_node("myglass:window_vertical_white", {
 			{-0.0625, -0.5, -0.0625, 0.0625, 0.5, 0.0625},
 			}
 		},
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 
 --Window Plus White
-minetest.register_node("myglass:window_plus_white", {
+core.register_node("myglass:window_plus_white", {
 	description = "Window Plus White",
 	tiles = {"myglass_white.png"},
 	drawtype = "mesh",
@@ -171,12 +171,12 @@ minetest.register_node("myglass:window_plus_white", {
 			{-0.5, -0.0625, -0.0625, 0.5, 0.0625, 0.0625},
 			}
 		},
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 local colors = {"red", "cyan", "green", "purple", "white"}
 for _,col in pairs(colors) do
 --Blinds
-minetest.register_node("myglass:blinds_"..col, {
+core.register_node("myglass:blinds_"..col, {
 	description = "Blinds - "..col,
 	tiles = {"myglass_blinds_"..col..".png"},
 	drawtype = "mesh",
@@ -200,7 +200,7 @@ minetest.register_node("myglass:blinds_"..col, {
 		core.set_node(pos, {name = "myglass:blinds_up_"..col, param2 = node.param2})
 	end
 })
-minetest.register_node("myglass:blinds_up_"..col, {
+core.register_node("myglass:blinds_up_"..col, {
 	description = "Blinds Up - "..col,
 	tiles = {"myglass_blinds_"..col..".png"},
 	drawtype = "mesh",
@@ -231,7 +231,7 @@ end
 
 --Window Frame
 
-minetest.register_craft({
+core.register_craft({
 	output = "myglass:window_frame 4",
 	recipe = {
 		{"group:wood", "default:glass",""},
@@ -242,7 +242,7 @@ minetest.register_craft({
 
 --Window Horizontal
 
-minetest.register_craft({
+core.register_craft({
 	output = "myglass:window_horizontal 3",
 	recipe = {
 		{"", "",""},
@@ -253,7 +253,7 @@ minetest.register_craft({
 
 --Window Vertical
 
-minetest.register_craft({
+core.register_craft({
 	output = "myglass:window_vertical 3",
 	recipe = {
 		{"", "group:wood",""},
@@ -264,7 +264,7 @@ minetest.register_craft({
 
 --Window Plus
 
-minetest.register_craft({
+core.register_craft({
 	output = "myglass:window_plus 5",
 	recipe = {
 		{"", "group:wood",""},
@@ -275,7 +275,7 @@ minetest.register_craft({
 
 --Window Frame White
 
-minetest.register_craft({
+core.register_craft({
 	type = "shapeless",
 	output = "myglass:window_frame_white 1",
 	recipe = {
@@ -285,7 +285,7 @@ minetest.register_craft({
 
 --Window Horizontal White
 
-minetest.register_craft({
+core.register_craft({
 	type = "shapeless",
 	output = "myglass:window_horizontal_white 1",
 	recipe = {
@@ -295,7 +295,7 @@ minetest.register_craft({
 
 --Window Vertical White
 
-minetest.register_craft({
+core.register_craft({
 	type = "shapeless",
 	output = "myglass:window_vertical_white 1",
 	recipe = {
@@ -305,7 +305,7 @@ minetest.register_craft({
 
 --Window Plus White
 
-minetest.register_craft({
+core.register_craft({
 	type = "shapeless",
 	output = "myglass:window_plus_white 1",
 	recipe = {

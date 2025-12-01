@@ -1,4 +1,4 @@
-minetest.register_node("myglass:window_shutter", {
+core.register_node("myglass:window_shutter", {
 	description = "Window Shutter",
 	tiles = {
 		"myglass_window_shutter.png"
@@ -28,9 +28,9 @@ minetest.register_node("myglass:window_shutter", {
 			{-0.5, -0.5, 0.375, 0.5, -0.375, 0.5},
 		}
 	},
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 })
-minetest.register_node("myglass:window_shutter2", {
+core.register_node("myglass:window_shutter2", {
 	description = "Window Shutter 2",
 	tiles = {
 		"myglass_window_shutter_front.png"
@@ -60,12 +60,12 @@ minetest.register_node("myglass:window_shutter2", {
 			{-0.5, -0.5, 0.375, 0.5, -0.375, 0.5},
 		}
 	},
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 })
 
 --Crafts
 
-minetest.register_craft({
+core.register_craft({
 	output = "myglass:window_shutter 1",
 	recipe = {
 		{"default:wood", "",""},
@@ -74,7 +74,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
+core.register_craft({
 	output = "myglass:window_shutter2 1",
 	recipe = {
 		{"default:wood", "default:wood",""},
