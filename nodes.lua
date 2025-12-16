@@ -173,7 +173,7 @@ core.register_node("myglass:window_plus_white", {
 		},
 	on_place = core.rotate_node
 })
-local colors = {"red", "cyan", "green", "purple", "white"}
+local colors = {"red", "cyan", "green", "violet", "purple", "white"}
 for _,col in pairs(colors) do
 --Blinds
 core.register_node("myglass:blinds_"..col, {
@@ -207,7 +207,7 @@ core.register_node("myglass:blinds_up_"..col, {
 	mesh = "myglass_blinds_up.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 2, oddly_breakable_by_hand = 2},
+	groups = {cracky = 2, oddly_breakable_by_hand = 2, not_in_creative_inventory = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -310,5 +310,49 @@ core.register_craft({
 	output = "myglass:window_plus_white 1",
 	recipe = {
 		"myglass:window_plus", "dye:white"
+	}
+})
+--Blinds
+core.register_craft({
+	output = "myglass:blinds_white 1",
+	recipe = {
+		{"default:stick", "dye:white",""},
+		{"default:stick", "",""},
+		{"default:stick", "",""}
+	}
+})
+core.register_craft({
+	type = "shapeless",
+	output = "myglass:blinds_red 1",
+	recipe = {
+		"myglass:blinds_white", "dye:red"
+	}
+})
+core.register_craft({
+	type = "shapeless",
+	output = "myglass:blinds_cyan 1",
+	recipe = {
+		"myglass:blinds_white", "dye:cyan"
+	}
+})
+core.register_craft({
+	type = "shapeless",
+	output = "myglass:blinds_green 1",
+	recipe = {
+		"myglass:blinds_white", "dye:green"
+	}
+})
+core.register_craft({
+	type = "shapeless",
+	output = "myglass:blinds_violet 1",
+	recipe = {
+		"myglass:blinds_white", "dye:violet"
+	}
+})
+core.register_craft({
+	type = "shapeless",
+	output = "myglass:blinds_purple 1",
+	recipe = {
+		"myglass:blinds_white", "mydye:purple"
 	}
 })
